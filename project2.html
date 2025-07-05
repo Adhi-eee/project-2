@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style2.css">
+  <title>Snap</title>
+</head>
+<body>
+  <img src="images/logo.svg" class="logo">
+  <nav class="navigation">
+    <input type="checkbox" id="activate">
+    <input type="checkbox" id="activate1">
+    <input type="checkbox" id="activate2">
+          <label for="activate"><img src="images/icon-close-menu.svg" class="close" ></label>
+
+
+    <div class="container">
+      <div class="features element">Features <label for="activate1"><img src="images/icon-arrow-down.svg" class="arrow1 arrow" > </label> </div>
+      <div class="box1">
+    <ul>
+      <li class="la"><img src="images/icon-todo.svg" class="photo"> Todo list </li>
+      <li class="lb"><img src="images/icon-calendar.svg" class="photo">Calender</li>
+      <li class="lc"><img src="images/icon-reminders.svg" class="photo">Remainders</li>
+      <li class="ld"><img src="images/icon-planning.svg" class="photo">Planning</li>
+    </ul>
+   </div>
+      <div class="company element">Company <label for="activate2"><img src="images/icon-arrow-down.svg " class="arrow2 arrow"></label></div>
+       <div class="box2">
+    <ul>
+      <li class="a"> History </li>
+      <li class="b">Our team</li>
+      <li class="c">Blog</li>
+    </ul>
+   </div>
+      <div class="careers element">Careers</div>
+      <div class="about element">About</div>
+    </div>
+    <div class="container2">
+        <div class="login element">Login</div>
+      <div class="register element">Register</div>
+    </div>
+   </nav>
+   
+  
+
+    <label for="activate" class="open"><img src="images/icon-menu.svg" class="open" ></label>
+  <div class="content">
+    <div class="text">
+      <h1 class="heading">
+        <div class="make">Make remote work</div>
+       
+      </h1>
+      <p>
+      Get your team in sync, no matter your location. Streamline processes, create team rituals,and watch productivity soar.
+      </p>
+      <div class="learn"> Learn More</div>
+      <img src="images/client-databiz.svg" class="sticker s1">
+      <img src="images/client-audiophile.svg" class="sticker s2">
+      <img src="images/client-meet.svg" class="sticker s3">
+      <img src="images/client-maker.svg" class="sticker s4">
+
+    </div>
+    <div class="pic">
+    <img src="images/image-hero-desktop.png" class="pic1">
+     <img src="images/image-hero-mobile.png" class="pic2">
+    </div>
+    
+
+  </div>
+  <script>
+    
+    const active1 = document.querySelector("#activate1");
+    const box1 = document.querySelector(".box1");
+    const active2 = document.querySelector("#activate2");
+    const box2 = document.querySelector(".box2");
+    const arrow1 = document.querySelector(".arrow1")
+    const arrow2 = document.querySelector(".arrow2")
+    const activate = document.querySelector("#activate");
+    const nav = document.querySelector(".navigation");
+
+    active1.addEventListener('change',()=>{
+      if(active1.checked){
+        box1.style.display = 'block';
+        arrow1.src="images/icon-arrow-up.svg";
+       
+      }
+      else{
+            box1.style.display = 'none';
+           arrow1.src="images/icon-arrow-down.svg"
+      }
+    })
+    
+    active2.addEventListener('change',() =>{
+      if(active2.checked){
+        box2.style.display = 'block';
+         arrow2.src="images/icon-arrow-up.svg";
+
+      }
+      else{
+        box2.style.display = 'none';
+         arrow2.src="images/icon-arrow-down.svg";
+      
+      }
+    })
+    activate.addEventListener('change',() => {
+       if(activate.checked){
+        nav.style.display = 'block';
+        nav.style.right = '0%'
+      
+
+      }
+      else{
+        nav.style.right = '-100%';
+      }
+    })
+  </script>
+</body>
+</html>
